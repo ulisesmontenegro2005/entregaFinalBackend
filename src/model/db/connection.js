@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
-import config from './../../../config.js'
 
     const connect = async () => {
-        let connection = await mongoose.connect(config.MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
+        let connection = await mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
     };
 
 export default {
